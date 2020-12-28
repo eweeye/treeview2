@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Sample</title>
+        <script type="text/javascript" src="../src/treeview.js"></script>
+    </head>
+    <body>
+        <h1>Sample</h1>
+        <ul id="sample"></ul>
+    </body>
+    <script type="text/javascript">
+        window.nodes = [];
+        window.nodes.push(e4e.Node());
+        window.nodes.push(e4e.Node());
+        e4e.Treeview("sample").Add(e4e.Node("A")).Add(e4e.Node("B").Add("B1").Add(e4e.Node("B2").Add("B2a").Add("B2b")).Add("B3")).Add(e4e.Node("C")).Finalize(); 
+        e4e.Treeview("sample").Add("D").Add("E").Add("F").Add("G").Finalize();
+        e4e.Node("e4e-6").Add("B2c").Add("B2d").Finalize();
+    </script>
+</html>
