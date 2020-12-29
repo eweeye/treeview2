@@ -1,0 +1,1 @@
+TreeView.prototype._trees = {};

@@ -1,0 +1,1 @@
+Node.prototype._nodes = {};

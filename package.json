@@ -1,0 +1,32 @@
+{
+  "name": "treeview2",
+  "version": "1.0.0",
+  "description": "EweEye Treeview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eweeye/treeview2.git"
+  },
+  "keywords": [
+    "EweEye",
+    "Treeview"
+  ],
+  "author": "Scott D. Hodgson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eweeye/treeview2/issues"
+  },
+  "homepage": "https://github.com/eweeye/treeview2#readme",
+  "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-jsbeautifier": "^0.2.13"
+  }
+}
