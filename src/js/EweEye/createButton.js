@@ -36,6 +36,7 @@ EweEye.createButton = function (action, classes, iconClasses) {
             span.classList.add(iconClasses);
         }
     }
+    button.value = action;
     button.appendChild(span);
     return button;
 };
