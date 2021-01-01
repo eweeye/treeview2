@@ -17,6 +17,10 @@ Node.NextId = (function () {
     };
 })();
 Node.prototype = {};
+Node.prototype.Icon = {
+    Style: "far",
+    Default: "fa-sticky-note"
+};
 Node.init = function (content) {
     var self = this;
     self.id = "e4e-" + Node.NextId();

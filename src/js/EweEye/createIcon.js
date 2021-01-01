@@ -1,16 +1,13 @@
-EweEye.createButton = function (id, action, classes) {
-    if (!EweEye.isString(action)) {
-        throw "Invalid action";
-    }
+EweEye.createIcon = function (id, classes) {
     if (classes && (!Array.isArray(classes) && !EweEye.isString(classes))) {
         throw "Invalid classes";
     }
-    var button = document.createElement("button");
+    var span = document.createElement("span");
     if (id) {
         if (!EweEye.isString(id)) {
             throw "Invalid id";
         }
-        button.id = id;
+        span.id = id;
     }
     if (classes) {
         if (Array.isArray(classes)) {
@@ -18,15 +15,16 @@ EweEye.createButton = function (id, action, classes) {
                 if (!EweEye.isString(classes[i])) {
                     throw "Invalid class";
                 }
-                button.classList.add(classes[i]);
+                span.classList.add(classes[i]);
             }
-        } else {
+        }
+        else
+        {
             if (!EweEye.isString(classes)) {
                 throw "Invalid class";
             }
-            button.classList.add(classes);
+            span.classList.add(classes);
         }
     }
-    button.value = action;
-    return button;
+    return span;
 };

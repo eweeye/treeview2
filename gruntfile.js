@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'src/js/intro.js',
-                    'src/js/EweEye/*.js', 
+                    'src/js/EweEye/*.js',
                     'src/js/RenderQueue/object.js', 'src/js/RenderQueue/prototype/*.js',
                     'src/js/TreeView/object.js', 'src/js/TreeView/prototype/*.js',
                     'src/js/Node/object.js', 'src/js/Node/prototype/*.js',
@@ -16,6 +16,13 @@ module.exports = function(grunt) {
                 ],
                 dest: 'dist/js/eweeye.js'
             }
+        },
+        copy: {
+            main: {
+                expand: true,
+                src: ['dist/**', 'samples/**'],
+                dest: '/var/www/html',
+            },
         },
         jsbeautifier: {
             files: ['dist/js/eweeye.js']
@@ -26,7 +33,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 files: {
-                    'dist/css/eweeye.css': 'src/sass/*.scss'
+                    'dist/css/eweeye.css': 'src/sass/main.scss'
                 }
             }
         },
@@ -43,10 +50,11 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jsbeautifier');
 
-    grunt.registerTask('default', ['clean', 'concat', 'jsbeautifier', 'jshint', 'uglify', 'sass']);
+    grunt.registerTask('default', ['clean', 'concat', 'jsbeautifier', 'jshint', 'uglify', 'sass', 'copy']);
 }

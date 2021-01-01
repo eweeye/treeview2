@@ -14,9 +14,9 @@ var ExpandableNode = function (idOrContent) {
 };
 ExpandableNode.prototype = Object.create(Node.init.prototype);
 ExpandableNode.prototype.Icon = {
-    Style: "fas",
-    Expanded: "minus-square",
-    Collapsed: "plus-square"
+    Style: "far",
+    Expanded: "fa-minus-square",
+    Collapsed: "fa-plus-square"
 };
 ExpandableNode.init = function (content) {
     EweEye.Node.init.call(this, content);
