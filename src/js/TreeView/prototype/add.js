@@ -8,7 +8,7 @@ TreeView.prototype.add = function (item) {
             item.parent = this;
             EweEye.RenderQueue.add(this).add(item);
         }
-    } else if (EweEye.isString(item)) {
+    } else if (_.isString(item)) {
         var node = Node(item);
         this._trees[this.id].nodes[node.id] = node;
         node.parent = this;

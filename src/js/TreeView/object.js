@@ -1,5 +1,5 @@
 var TreeView = function (id) {
-    if (EweEye.isString(id)) {
+    if (_.isString(id)) {
         if (EweEye.TreeView.prototype._trees.hasOwnProperty(id)) {
             return EweEye.TreeView.prototype._trees[id];
         }

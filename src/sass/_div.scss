@@ -1,3 +1,31 @@
-ul.e4e-treeview li.e4e-node > div > div {
+%div-button-margin {
+    padding: 2px 0 0 0;    
+}
+
+%div-align-inline-block {
     display: inline-block;
+}
+
+ul.e4e-treeview div.e4e-icon {
+    @extend %div-button-margin;
+}
+
+ul.e4e-treeview div.e4e-expand {
+    @extend %div-button-margin;
+}
+
+ul.e4e-treeview li.e4e-node div.e4e-content {
+    @extend %div-align-inline-block;
+}
+
+ul.e4e-treeview li.e4e-node div.e4e-icon {
+    @extend %div-align-inline-block;
+}
+
+ul.e4e-treeview li.e4e-node div.e4e-expand {
+    @extend %div-align-inline-block;
+}
+
+ul.e4e-treeview li.e4e-node div.e4e-toggle {
+    @extend %div-align-inline-block;
 }

@@ -1,10 +1,10 @@
-EweEye.createDiv = function (id, content, classes) {
-    if (classes && (!Array.isArray(classes) && !EweEye.isString(classes))) {
+EweEye.createDiv = function (id, classes) {
+    if (classes && (!Array.isArray(classes) && !_.isString(classes))) {
         throw "Invalid classes";
     }
     var div = document.createElement("div");
     if (id) {
-        if (!EweEye.isString(id)) {
+        if (!_.isString(id)) {
             throw "Invalid id";
         }
         div.id = id;
@@ -12,7 +12,7 @@ EweEye.createDiv = function (id, content, classes) {
     if (classes) {
         if (Array.isArray(classes)) {
             for (var i = 0, ilen = classes.length; i < ilen; i++) {
-                if (!EweEye.isString(classes[i])) {
+                if (!_.isString(classes[i])) {
                     throw "Invalid class";
                 }
                 div.classList.add(classes[i]);
@@ -20,17 +20,10 @@ EweEye.createDiv = function (id, content, classes) {
         }
         else
         {
-            if (!EweEye.isString(classes)) {
+            if (!_.isString(classes)) {
                 throw "Invalid class";
             }
             div.classList.add(classes);
-        }
-    }
-    if (content) {
-        if (EweEye.isElement(content)) {
-            div.appendChild = content;
-        } else if (EweEye.isString(content)) {
-            div.innerHTML = content;
         }
     }
     return div;

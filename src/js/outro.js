@@ -1,2 +1,2 @@
     global.e4e = EweEye;
-}(window));
+}(window, _ ? _ : null));

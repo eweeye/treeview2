@@ -1,7 +1,10 @@
 ul.e4e-treeview {
     list-style-type: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 ul.e4e-treeview li.e4e-node > ul {
     list-style-type: none;
+    padding: 0 0 0 15px;
 }
