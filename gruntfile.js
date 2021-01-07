@@ -11,7 +11,9 @@ module.exports = function (grunt) {
                     'src/js/RenderQueue/object.js', 'src/js/RenderQueue/prototype/*.js',
                     'src/js/TreeView/object.js', 'src/js/TreeView/prototype/*.js',
                     'src/js/Node/object.js', 'src/js/Node/prototype/*.js',
-                    'src/js/ExpandableNode/object.js', 'src/js/ExpandableNode/prototype/*.js',
+                    'src/js/CheckNode/object.js', 'src/js/CheckNode/prototype/*.js',
+                    'src/js/ExpandNode/object.js', 'src/js/ExpandNode/prototype/*.js',
+                    'src/js/ExpandCheckNode/object.js', 'src/js/ExpandCheckNode/prototype/*.js',
                     'src/js/outro.js'
                 ],
                 dest: 'dist/js/eweeye.js'

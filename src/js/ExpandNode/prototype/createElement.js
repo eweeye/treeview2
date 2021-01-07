@@ -1,4 +1,4 @@
-ExpandableNode.prototype.createElement = function () {
+ExpandNode.prototype.createElement = function () {
     // <li>
     //   <button></button>
     //   <div></div>
@@ -12,12 +12,11 @@ ExpandableNode.prototype.createElement = function () {
     var expandButton = EweEye.createButton(null, "expand");
     var collapseButton = EweEye.createButton(null, "collapse", "e4e-hidden");
     divExpander.appendChild(expandButton);
-    var expandIcon = EweEye.createIcon(null, this.ExpandedIconClass.split(" "));
+    var expandIcon = EweEye.createIcon(null, this.expandedIconClass.split(" "));
     expandButton.appendChild(expandIcon);
     divExpander.appendChild(collapseButton);
-    var collapseIcon = EweEye.createIcon(null, this.CollapsedIconClass.split(" "));
+    var collapseIcon = EweEye.createIcon(null, this.collapsedIconClass.split(" "));
     collapseButton.appendChild(collapseIcon);
-
     var divIcon = EweEye.createDiv(null, "e4e-icon");
     divContainer.appendChild(divIcon);
     var divContent;

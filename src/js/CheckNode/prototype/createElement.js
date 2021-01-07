@@ -1,7 +1,4 @@
-Node.prototype.createElement = function () {
-    // <li>
-    //   <ul></ul>
-    // </li>
+CheckNode.prototype.createElement = function () {
     var li = EweEye.createItem(this.id, "e4e-node");
     var divIcon = EweEye.createDiv(null, "e4e-icon");
     var icon = EweEye.createIcon(null, this.defaultIconClass.split(" "));
@@ -9,6 +6,21 @@ Node.prototype.createElement = function () {
     var divContent = EweEye.createDiv(null, "e4e-content");
     EweEye.addContent(divContent, this.content);
     var divContainer = EweEye.createDiv();
+    divCheck = EweEye.createDiv(null, "e4e-check", null);
+    var buttonUncheck = EweEye.createButton(null, "check");
+    var uncheckIcon = EweEye.createIcon(null, this.uncheckedIconClass.split(" "));
+    buttonUncheck.appendChild(uncheckIcon);
+    divCheck.appendChild(buttonUncheck);
+    var buttonCheck = EweEye.createButton(null, "uncheck");
+    var checkIcon = EweEye.createIcon(null, this.checkedIconClass.split(" "));
+    buttonCheck.appendChild(checkIcon);
+    divCheck.appendChild(buttonCheck);
+    if (this.checked) {
+        buttonUncheck.classList.add("e4e-hidden");
+    } else {
+        buttonCheck.classList.add("e4e-hidden");
+    }
+    divContainer.appendChild(divCheck);
     if (this.selectable) {
         var divSelect = EweEye.createDiv(null, "e4e-select");
         var buttonContent = EweEye.createButton(null, "select");

@@ -14,6 +14,14 @@ ul.e4e-treeview div.e4e-expand {
     @extend %div-button-margin;
 }
 
+ul.e4e-treeview div.e4e-check {
+    @extend %div-button-margin;
+}
+
+ul.e4e-treeview div.e4e-select {
+    @extend %div-button-margin;
+}
+
 ul.e4e-treeview li.e4e-node div.e4e-content {
     @extend %div-align-inline-block;
 }
@@ -26,6 +34,10 @@ ul.e4e-treeview li.e4e-node div.e4e-expand {
     @extend %div-align-inline-block;
 }
 
-ul.e4e-treeview li.e4e-node div.e4e-toggle {
+ul.e4e-treeview li.e4e-node div.e4e-check {
+    @extend %div-align-inline-block;
+}
+
+ul.e4e-treeview li.e4e-node div.e4e-select {
     @extend %div-align-inline-block;
 }

@@ -3,8 +3,11 @@
 <head>
     <title>Sample</title>
     <script src="https://kit.fontawesome.com/da5f8cdc94.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../dist/css/eweeye.css"></style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"
+        integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../dist/css/eweeye.css">
+    </style>
     <script type="text/javascript" src="../dist/js/eweeye.js"></script>
 </head>
 
@@ -13,11 +16,11 @@
     <ul id="sample"></ul>
 </body>
 <script type="text/javascript">
-    e4e.TreeView("sample").add(e4e.Node("A")).add(e4e.Node("B", { selectable: true }).add("B1").add(e4e.Node("B2").add("B2a").add("B2b")).add("B3")).add(e4e.Node("C")).finalize();
+    e4e.TreeView("sample").add(e4e.Node("A")).add(e4e.CheckNode("B", { selectable: true }).add("B1").add(e4e.Node("B2").add("B2a").add("B2b")).add("B3")).add(e4e.Node("C")).finalize();
     e4e.TreeView("sample").add("D").add("E").add("F").add("G").finalize();
     e4e.Node("e4e-6").add("B2c").add("B2d").finalize();
-    e4e.TreeView("sample").add(e4e.ExpandableNode("folder").add(e4e.ExpandableNode("sub-folder", { selectable: true }).add("file1").add("file2")).add("document").add("file").add("spreadsheet")).finalize();
-    document.addEventListener("node-click", function(e, data) {
+    e4e.TreeView("sample").add(e4e.ExpandNode("folder").add(e4e.ExpandCheckNode("sub-folder", { selectable: true }).add("file1").add("file2")).add("document").add("file").add("spreadsheet")).finalize();
+    document.addEventListener("node-click", function (e, data) {
         event.log(JSON.stringify(data));
     });
 </script>

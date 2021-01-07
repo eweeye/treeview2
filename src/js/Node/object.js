@@ -17,14 +17,22 @@ Node.NextId = (function () {
     };
 })();
 Node.prototype = {
-    selectable: false
+    selectable: false,
+    checkable: false,
+    checked: false
 };
-Node.prototype.DefaultIconClass = "far fa-sticky-note fa-fw";
+Node.prototype.defaultIconClass = "far fa-sticky-note fa-fw";
 Node.init = function (content, attributes) {
     var self = this;
-    self.id = "e4e-" + Node.NextId();
-    self.content = content || "";
-    self.parent = null;    
+    if (!self.hasOwnProperty("id") || !self.id) {
+        self.id = "e4e-" + Node.NextId();
+    }
+    if (!self.hasOwnProperty("content") || !self.content) {
+        self.content = content || "";
+    }
+    if (!self.hasOwnProperty("parent")) {
+        self.parent = null;
+    }
     if (_.isObject(attributes)) {
         _.assign(self, attributes);
     }

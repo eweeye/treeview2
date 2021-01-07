@@ -26,6 +26,10 @@ ul.e4e-treeview div.e4e-expand > button > span {
     @extend %button-icon;
 }
 
+ul.e4e-treeview div.e4e-check > button > span {
+    @extend %button-icon;
+}
+
 ul.e4e-treeview li.e4e-node div.e4e-icon > button {
     @extend %button-unstyled;
 }
@@ -42,6 +46,10 @@ ul.e4e-treeview li.e4e-node div.e4e-select > button {
     @extend %button-unstyled;
 }
 
+ul.e4e-treeview li.e4e-node div.e4e-check > button {
+    @extend %button-unstyled;
+}
+
 ul.e4e-treeview div.e4e-content > button:focus {
     @extend %button-focus;
 }
@@ -55,5 +63,9 @@ ul.e4e-treeview div.e4e-icon > button:focus {
 }
 
 ul.e4e-treeview div.e4e-select > button:focus {
+    @extend %button-focus;
+}
+
+ul.e4e-treeview div.e4e-check > button:focus {
     @extend %button-focus;
 }
